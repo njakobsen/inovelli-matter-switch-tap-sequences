@@ -535,6 +535,8 @@ action:
       - condition: state
         entity_id: !input entity_light
         state: "on" 
+      - condition: template
+        value_template: "{{ brightnessSyncEnabled }}"
     sequence:
     - variables:
         inovelliLightBrightness: |
